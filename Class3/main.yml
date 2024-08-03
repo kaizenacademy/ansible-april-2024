@@ -7,3 +7,5 @@
     include: php.yml
   - name: Install wordpress
     include: app.yml
+  - name: Install mysql
+    include: mysql.yml
