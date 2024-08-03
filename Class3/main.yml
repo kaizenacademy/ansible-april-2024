@@ -3,3 +3,5 @@
   tasks:
   - name: Install and start Apache
     include: apache.yml
+  - name: Install php
+    include: php.yml
