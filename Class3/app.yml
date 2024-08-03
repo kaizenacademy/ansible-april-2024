@@ -11,10 +11,19 @@
 
 - name: Copy file with owner and permissions
   ansible.builtin.copy:
-    src: /tmp/wordpress/*
+    src: /tmp/wordpress/.
     dest: /var/www/html
     owner: www-data
     group: www-data
     mode: '0755'
     remote_src: yes
 
+- name: Remove file
+  ansible.builtin.file:
+    path: /var/www/html/index.html
+    state: absent
+
+- name: Restart apache
+  ansible.builtin.service:
+    name: apache2
+    state: restarted
