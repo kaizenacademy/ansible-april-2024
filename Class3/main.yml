@@ -5,3 +5,5 @@
     include: apache.yml
   - name: Install php
     include: php.yml
+  - name: Install wordpress
+    include: app.yml
