@@ -2,3 +2,10 @@
   ansible.builtin.get_url:
     url: https://wordpress.org/latest.tar.gz
     dest: /tmp
+
+- name: Extract wordpress
+  ansible.builtin.unarchive:
+    src: /tmp/wordpress-6.6.1.tar.gz
+    dest: /tmp
+    remote_src: yes
+
