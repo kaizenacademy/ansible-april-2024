@@ -1,0 +1,4 @@
+- name: Copy file
+  ansible.builtin.copy:
+    src: kaizen/files/hello.txt
+    dest: ./
