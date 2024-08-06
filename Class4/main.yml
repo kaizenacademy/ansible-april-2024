@@ -1,4 +1,6 @@
 - hosts: all
+  vars:
+    dest: /mnt
   become: yes
   roles:
     - hello
